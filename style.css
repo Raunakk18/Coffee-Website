@@ -47,7 +47,24 @@ img{
     /* margin: 0 auto; */
     padding: 0 20px;
 }
+.section-title{
+    text-align: center;
+    text-transform: uppercase;
+    padding: 60px 0 100px;
+    font-size: var(--font-size-xl);
+    position: relative;
+}
 
+.section-title::after{
+    content: "";
+    width: 80px;
+    height: 4px;
+    position: static;
+    display: block;
+    margin: 10px auto 0 auto;
+    background: var(--secondary-color);
+    border-radius: 8px;
+}
 header{
     background-color: var(--primary-color);
     position: fixed;
@@ -175,22 +192,36 @@ header .navbar{
     height: 300px;
     border-radius: 50%;
 }
+
+.about-section .section-title{
+    padding: 0;
+}
+
+.about-section .about-details{
+    max-width: 50%;
+}
+
+.about-section .text{
+    line-height: 30px;
+    text-align: center;
+    margin: 50px 0 30px;
+    font-size: var(--font-size-m);
+}
 /* From Uiverse.io by elisapi */ 
 .card {
-  width: fit-content;
   height: fit-content;
   background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 15px;
-  gap: 20px;
+  padding: 0px;
+  gap: 15px;
 }
 
 .socialContainer {
-  width: 52px;
-  height: 52px;
-  background-color: rgb(65, 29, 131);
+  width: 30px;
+  height: 30px;
+  background-color:var(--dark-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -200,27 +231,27 @@ header .navbar{
 }
 
 .containerOne:hover {
-  background-color: #d62976;
+  background-color:#f39613;
   transition-duration: 0.3s;
-  transform: scale(1.2);
+  transform: scale(1);
 }
 
 .containerTwo:hover {
-  background-color: #00acee;
+  background-color:var(--secondary-color);
   transition-duration: 0.3s;
-  transform: scale(1.2);
+  transform: scale(1);
 }
 
 .containerThree:hover {
-  background-color: #0072b1;
+  background-color:var(--secondary-color);
   transition-duration: 0.3s;
-  transform: scale(1.2);
+  transform: scale(1);
 }
 
 .containerFour:hover {
-  background-color: #128c7e;
+  background-color:var(--secondary-color);
   transition-duration: 0.3s;
-  transform: scale(1.2);
+  transform: scale(1);
 }
 
 .socialContainer:active {
@@ -252,7 +283,7 @@ header .navbar{
   }
 }
 
-
+/* ----- */
 @media screen and (max-width:900px){
     :root{
     --font-size-m: 1rem;
