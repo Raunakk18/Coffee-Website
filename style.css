@@ -351,7 +351,7 @@ header .navbar{
         padding: 30px 20px 20px;
     }
 
-    .hero-section .section-content :is(.subtitle, .description){
+    .hero-section .section-content :is(.subtitle, .description), .about-section .about-details{
         max-width: 100%;
     }
 
@@ -370,4 +370,17 @@ header .navbar{
         order: 2;
         text-align: center;
     }
+
+    .section-content{
+        flex-direction: column;
+        gap: 70px;
+    }
+
+    .about-section .about-image{
+        height: 100%;
+        width: 100%;
+        max-width: 250px;
+        aspect-ratio: 1;
+    }
+
 }
