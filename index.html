@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <title>Coffee Website</title>
 </head>
 <body>
@@ -141,18 +142,45 @@
         <section class="testimonials-section">
           <h2 class="section-title">Testimonials</h2>
           <div class="section-content">
-            <div class="slider-container">
+            <div class="slider-container swiper">
               <div class="slider-wrapper">
-                <ul class="testimonials-list">
-                  <li class="testimonia">
-                    
+                <ul class="testimonials-list swiper-wrapper">
+                  <li class="testimonial swiper-slide">
+                    <img src="assets/user-1.jpg" alt="" class="user-image">
+                    <h3 class="name">Sarah Tancredi</h3>
+                    <i class="feedback">The French Roast hit the spot—rich, smooth, and just strong enough. Totally worth it, I’ll be back for sure!</i>
+                  </li>
+                  <li class="testimonial swiper-slide">
+                    <img src="assets/user2.jpeg" alt="" class="user-image">
+                    <h3 class="name">Micheal Scofield</h3>
+                    <i class="feedback">The wings had the perfect spicy kick and were so flavorful. Paired with the sides, this combo is a must-try!</i>
+                  </li>
+                  <li class="testimonial swiper-slide">
+                    <img src="assets/user-3.jpg" alt="" class="user-image">
+                    <h3 class="name">Lincoln Burrows</h3>
+                    <i class="feedback">The dessert was heavenly—just the right sweetness and a lovely texture. Made my meal complete!</i>
+                  </li>
+                  <li class="testimonial swiper-slide">
+                    <img src="assets/user-4.jpg" alt="" class="user-image">
+                    <h3 class="name">Veronica Donovam</h3>
+                    <i class="feedback">Iced coffee was smooth and refreshing, not too bitter or too sweet—a perfect pick-me-up.</i>
+                  </li>
+                  <li class="testimonial swiper-slide">
+                    <img src="assets/user-5.jpg" alt="" class="user-image">
+                    <h3 class="name">James Whistler</h3>
+                    <i class="feedback">The burger was juicy with a great blend of spices. Loved every bite!</i>
                   </li>
                 </ul>
+
+                  <div class="swiper-pagination"></div>
+                   <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
               </div>
             </div>
           </div>
         </section>
     </main>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="app.js"></script>
 </html>
