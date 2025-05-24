@@ -47,6 +47,11 @@ img{
     /* margin: 0 auto; */
     padding: 0 20px;
 }
+
+.section-contente{
+    padding: 0 20px;
+    max-width: 1300px;
+}
 .section-title{
     text-align: center;
     text-transform: uppercase;
@@ -324,36 +329,95 @@ header .navbar{
     font-size: var(--font-size-m);
 }
 
-.testimonials-section{
+.gallery-section{
+    padding: 50px 0 100px;
+}
+
+.gallery-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.gallery-list .gallery-item{
+    width: calc((100% - 2 * 32px) / 3);
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.gallery-item .gallery-image{
+    width: 100%;
+    height: 100%;
+    cursor: zoom-in;
+    transition: 0.3s ease;
+}
+
+.gallery-item .gallery-image:hover{
+    transform: scale(1.3);
+}
+
+.contact-section{
     padding: 50px 0 100px;
     background: var(--light-pink-color);
 }
 
-.testimonials-section .testimonials-list .testimonial{
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    padding: 35px !important;
-    text-align: center !important;
-
+.contact-section .section-contente{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+.form-input {
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  padding: 1em;
+  background-color: #ccc;
+  box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+  transition: 300ms ease-in-out;
 }
 
-.testimonials-section .testimonial.swiper-slide .user-image{
-    height: 180px;
-    width: 180px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 50px;
+.form-input:focus {
+  background-color: white;
+  transform: scale(1.05);
+  box-shadow: 13px 13px 100px #969696,
+             -13px -13px 100px #ffffff;
 }
 
-.testimonial.swiper-slide .name{
-    margin-bottom: 16px;
-    font-size: var(--font-size-m);
+/* From Uiverse.io by lenfear23 */ 
+.submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+  background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+  border-radius: 30px;
+  border: 1px solid #8F9092;
+  transition: all 0.2s ease;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #606060;
+  text-shadow: 0 1px #fff;
 }
 
-.testimonial .feedback{
-    line-height: 25px;
+.submit:hover {
+  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 3px 3px #CECFD1;
 }
+
+.submit:active {
+  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+}
+
+.submit:focus {
+  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+}
+
+
+
 
 @media screen and (max-width: 1024px){
 
@@ -474,18 +538,22 @@ header .navbar{
     .menu-item .menu-image{
         max-width: 200px;
     }
+    .gallery-list {
+        gap: 30px;
+    }
+
+    .gallery-list .gallery-item{
+        width: calc((100% - 2 * 30px) / 2);
+    }
 }
 
 @media screen and (max-width :640px){
-   .menu-section .menu-list .menu-item{
+   .menu-section .menu-list .menu-item,
+   .gallery-list .gallery-item{
         width: 100%;
     }
     .menu-section .menu-list{
         gap: 60px;
     }
-    .testimonials-section .testimonial.swiper-slide .user-image {
-    width: 90px;
-    height: 90px;
-    margin-bottom: 20px;
-  }
 }
+
